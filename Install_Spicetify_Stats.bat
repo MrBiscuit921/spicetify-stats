@@ -5,6 +5,9 @@ powershell -Command "iwr -useb 'https://github.com/harbassan/spicetify-apps/rele
 :: Extract the zip file to the CustomApps folder
 powershell -Command "Expand-Archive -Path 'spicetify-stats.release.zip' -DestinationPath $env:appdata\spicetify\CustomApps -Force"
 
+:: Delete the zip from downloads folder
+DEL /F /Q "%USERPROFILE%\Downloads\spicetify-stats.release.zip"
+
 :: make suke spicetify notices change
 powershell -Command "spicetify config custom_apps stats"
 powershell -Command "spicetify apply"
