@@ -1,5 +1,7 @@
 @echo off
+
 :: Download the zip file
+echo Downloading from github
 powershell -Command "iwr -useb 'https://github.com/harbassan/spicetify-apps/releases/download/stats-v1.1.1/spicetify-stats.release.zip' -OutFile 'spicetify-stats.release.zip'"
 
 :: Extract the zip file to the CustomApps folder
